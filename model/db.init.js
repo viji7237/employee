@@ -28,4 +28,4 @@ var employeeSchema = new mongoose.Schema({
 
 
 // Build the User model
-mongoose.model('employee', employeeSchema, 'employee');
+mongoose.model('employee', employeeSchema);
