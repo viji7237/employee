@@ -7,8 +7,8 @@ router.get('/create', function (req, res) {
     var ed = readRequestData(req);
     
     employee
-    //.create(ed.name, ed.email, ed.date_of_birth, ed.department, ed.gender, ed.age)
-    .create('emp1', 'sample@gmail.com', '1984/06/15', 'MCA', 'male', 33)
+    .create(ed.name, ed.email, ed.date_of_birth, ed.department, ed.gender, ed.age)
+    //.create('emp1', 'sample@gmail.com', '1984/06/15', 'MCA', 'male', 33)
     .then(function (data) {
         console.log(data);
     })
@@ -35,8 +35,6 @@ router.get('/update/:id', function (req, res) {
 
 router.get('/delete/:id', function (req, res) {
     
-    var ed = readRequestData(req);
-    ed.name = 'test';
     employee
     .delete(req.params.id)
     .then(function (data) {
